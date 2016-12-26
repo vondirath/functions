@@ -1,5 +1,3 @@
-import cgi
-
 list_content = """
 <ul>
 
@@ -23,7 +21,5 @@ def open_page(list):
     output_file.write(content)
     output_file.close()
 
+# call
 open_page(list)
-
-# to handle input
-
