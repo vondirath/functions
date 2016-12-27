@@ -48,10 +48,8 @@ def loaded_dice(num_dice, sides, bias):
     # creates a list of sides from 1 til highest number and removes 0
     side_list = list(range(sides + 1))
     side_list.pop(0)
-    # creates a list from bias
-    bias_list = [int(x) for x in bias]
-    # creates a new list combining the side_list and bias
-    loaded_list = side_list + bias_list
+    # creates a list from bias while adding it to side_list
+    loaded_list = [int(x) for x in bias] + side_list
     # creates a random selection in the loaded_list
     for dice in range(0, num_dice):
         result['Dice ' + str(dice + 1)] = random.choice(loaded_list)
