@@ -8,7 +8,11 @@ def get_value(s):
 
 
 def isanagram(s, t):
+    if s is None or t is None or s == '' or t == '':
+        return False
     lent = len(t)
+    if lent > len(s) or lent > 20 or len(s) > 20:
+        return False
     anagram = get_value(t)
 
     for i in range(0, lent + 1):
@@ -17,7 +21,7 @@ def isanagram(s, t):
     return False
 
 
-
+# O(n)? 
 # test cases
 # true
 print isanagram("banana", 'nana')
@@ -25,3 +29,5 @@ print isanagram("banana", 'nana')
 print isanagram("longstring", "yell")
 # false
 print isanagram("1234", "seven")
+print isanagram('', 'k')
+print isanagram('aaaaaaaaaaaaaaaaaaaa', 'bbbb')
