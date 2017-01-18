@@ -11,13 +11,13 @@ def question4(root, n1, n2):
         return question4(root.right, n1, n2)
     return root.value
 
-root = Node(20)
-root.left = Node(8)
-root.right = Node(22)
-root.left.left = Node(4)
-root.left.right = Node(12)
-root.left.right.left = Node(10)
-root.left.right.right = Node(14)
+root = BSTNode(20)
+root.left = BSTNode(8)
+root.right = BSTNode(22)
+root.left.left = BSTNode(4)
+root.left.right = BSTNode(12)
+root.left.right.left = BSTNode(10)
+root.left.right.right = BSTNode(14)
 
 print question4(root, 10, 14)
 print question4(root, 14, 8)
